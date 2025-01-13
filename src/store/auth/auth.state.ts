@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { SetAuthData } from './auth.actions';
-import { UsuarioType } from '../../domain/usuario.model';
+import { UsuarioType } from '../../app/core/domain/models';
 
 @State<UsuarioType>({
   name: 'authState',
