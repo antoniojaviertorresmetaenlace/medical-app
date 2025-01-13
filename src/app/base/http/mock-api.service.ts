@@ -2,9 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 import { delay } from 'rxjs/operators';
 import { ApiService } from './api-service.interface';
-import { Cita, Diagnostico, Medico, Paciente, UsuarioType } from '../app/core/domain/models';
 import { mockData } from './mock-data';
-;
+import { UsuarioType, Cita, Diagnostico, Medico, Paciente } from '../../core/domain/models';
 
 type MockDataType = {
   usuarios: UsuarioType[];
@@ -17,11 +16,12 @@ type MockDataType = {
 @Injectable({
   providedIn: 'root'
 })
-export class MockApiService implements ApiService {
+export class MockApiService extends ApiService {
   private mockData: MockDataType = {...mockData}
 
   constructor() {
     // Inicializar las listas filtradas
+    super()
     this.mockData.medicos = this.mockData.usuarios.filter(u => u.tipo === 'medico') as Medico[];
     this.mockData.pacientes = this.mockData.usuarios.filter(u => u.tipo === 'paciente') as Paciente[];
   }

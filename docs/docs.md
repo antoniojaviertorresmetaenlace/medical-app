@@ -1,7 +1,8 @@
 # Tareas a Implementar
 
 ## Servicios y APIs
-- Implementar los servicios que consumen la MockApi
+- [X] Implementados los repositorios con sus respectivas interfaces
+- [] Implementar los servicios que consumen la MockApi
 
 ## Funcionalidades
 ### Login

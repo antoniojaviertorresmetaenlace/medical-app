@@ -1,4 +1,4 @@
-import { UsuarioType, Cita, Diagnostico, Medico, Paciente } from "../app/core/domain/models";
+import { UsuarioType, Cita, Diagnostico, Medico, Paciente } from "../../core/domain/models";
 
 export interface MockDataType {
   usuarios: UsuarioType[];
